@@ -18,7 +18,7 @@ function click() {
             if(energyCur <= 10){
                 NoneEnergy = true
             }
-            if((energyMax - energyCur) <= 7950){
+            if((energyMax - energyCur) <= 20){
                 NoneEnergy = false
             }
         }
