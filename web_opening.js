@@ -1,7 +1,7 @@
-if(location.hostname === "hamsterkombatgame.io") {
+if (location.hostname === "hamsterkombatgame.io") {
     const org_indexOf = Array.prototype.indexOf
-    Array.prototype.indexOf = function (...args) {
-        if(JSON.stringify(this) === JSON.stringify(["android", "android_x", "ios"])) {
+    Array.prototype.indexOf = function(...args) {
+        if (JSON.stringify(this) === JSON.stringify(["android", "android_x", "ios"])) {
             setTimeout(() => {
                 Array.prototype.indexOf = org_indexOf
             })
@@ -9,4 +9,6 @@ if(location.hostname === "hamsterkombatgame.io") {
         }
         return org_indexOf.apply(this, args)
     }
+    setInterval(() => location.reload(location.href), 3600000);
+
 }
